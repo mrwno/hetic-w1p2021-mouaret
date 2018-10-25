@@ -19,6 +19,14 @@
       align-items: center;
     }
 
+    @font-face {
+      font-family: 'accidental_presidencyregular';
+      src: url('accid___-webfont.woff2') format('woff2'),
+           url('accid___-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     .topnav {
       display: flex;
       flex-direction : row;
@@ -50,6 +58,14 @@
       color: black;
     }
 
+    section.intro{
+      background-color: rgb(253, 247, 247);
+      margin-top: 20px;
+      margin-right: 150px;
+      margin-left: 150px; 
+      padding: 30px;
+    }
+
     h1 {
       font-size: 200%; 
       color:rgb(253, 247, 247); 
@@ -63,9 +79,9 @@
       text-decoration: none;
     }
 
-
     p,ul,li,td {
       color: black; 
+      font-family: 'accidental_presidencyregular' Arial, sans-serif;
     }
 
     a{
