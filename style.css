@@ -20,30 +20,36 @@
       font-style: normal;
     }
 
-/* Tête du site */
+/* Head of page */
 
    header{
-      background-image: url("image/japon.png") ;
-      height: 192px;
+      background-image: url("image/japon.png");
+      height: 100px;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-/* Barre De Menu */
 
+    @media (min-width: 600px){
+      header{
+        height: 192px;
+      }
+    }
+    
+/* Menu */
+  /* Mobile First */
     .topnav {
       display: flex;
-      flex-direction : row;
-      justify-content: center;
+      flex-direction : column;
       background-color: #333;
       overflow: hidden;
+      align-items: center;
     }
 
 
     .topnav a {
-      display: table-cell;
-      width: 23%;
+      width: 100%;
       color: #f2f2f2;
       text-align: center;
       padding: 14px;
@@ -62,34 +68,65 @@
       background-color: #ddd;
       color: black;
     }
+  /* Swap to Desktop device */
+    @media (min-width: 600px){
+      .topnav {
+        flex-direction : row;
+        justify-content: center;
+      }
+  
+      .topnav a {
+        width: 23%;
+      }
+    }
 
-/* Contenu Page Acceuil */
+/* Home Content */
 
     section.intro{
       background-color: rgb(253, 247, 247);
-      margin-top: 20px;
-      margin-right: 150px;
-      margin-left: 150px; 
-      padding: 30px;
+      margin-top: 5%;
+      margin-right: 15%;
+      margin-left: 15%; 
+      padding: 3%;
       border-radius: 10px 10px 10px 10px;
+      min-width: 200px;
     }
 
-/* Pied De la Page identique sur tte les pages */
+  /* Footer of page */
 
     footer{
       background-color: rgb(253, 247, 247);
-      margin-top: 20px;
-      margin-right: 150px;
-      margin-left: 150px; 
-      padding: 30px;
+      margin-top: 5%;
+      margin-right: 15%;
+      margin-left: 15%; 
+      padding: 3%;
       border-radius: 10px 10px 10px 10px;
     }
 
-    footer p {
+    footer p.cr {
       text-align: right;
     }
 
-/* Caracteristique  Écriture */
+    @media (min-width: 600px){
+      section.intro{
+        margin-top: 20px;
+        margin-right: 150px;
+        margin-left: 150px; 
+        padding: 30px;
+      }
+  
+    /* Footer of page */
+  
+      footer{
+        margin-top: 20px;
+        margin-right: 150px;
+        margin-left: 150px; 
+        padding: 30px;
+      }
+    }
+
+
+/* Writing caracteristic */
 
     h1 {
       font-size: 200%; 
@@ -107,9 +144,4 @@
     p,ul,li,td {
       color: black; 
       font-family: 'accidental_presidencyregular' Arial, sans-serif;
-    }
-
-    a{
-      color: rgb(253, 247, 247) ;
-      text-decoration: none;
     }
